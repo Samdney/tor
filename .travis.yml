@@ -53,7 +53,8 @@ addons:
 env:
   global:
     ## The Travis CI environment allows us two cores, so let's use both.
-    - MAKEFLAGS="-j 2"
+    #- MAKEFLAGS="-j 2"
+    - MAKEFLAGS="-j 1"
   matrix:
     - RUST_OPTIONS="--enable-rust --enable-cargo-online-mode"
     - RUST_OPTIONS="--enable-rust" TOR_RUST_DEPENDENCIES=true
